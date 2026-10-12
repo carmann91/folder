@@ -78,3 +78,17 @@
 #review-previews{flex:1;min-height:0;overflow-y:auto;scrollbar-width:thin;scrollbar-color:var(--line) transparent;padding-right:12px;overscroll-behavior:contain}
 .reviews-card>.text-link{margin-top:0;flex-shrink:0}
 @media(max-width:720px){.social-grid{--preview-height:940px}}
+
+/* Instagram autonomo; mappa e recensioni affiancate nella sezione contatti. */
+.instagram-section-grid{max-width:850px;margin:0 auto}
+.instagram-section-grid>.instagram-card{height:900px;min-height:0;overflow:hidden}
+.instagram-section-grid .instagram-frame{flex:1 0 0;height:100%;min-height:0;margin:0}
+.visit-grid{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;align-items:stretch}
+.visit-grid>.location-card,.visit-grid>.reviews-card{grid-column:auto;height:820px;min-height:0;min-width:0;overflow:hidden;padding:clamp(28px,3.2vw,46px)}
+.visit-grid>.location-card{display:flex;flex-direction:column}
+.visit-grid .location-heading{flex-direction:column;align-items:flex-start;gap:12px;flex-shrink:0}
+.visit-grid .location-heading h3,.visit-grid .reviews-card h3{font-size:clamp(32px,3vw,44px)}
+.visit-grid .map-preview{flex:1;min-height:0}
+.visit-grid .map-preview iframe{height:100%;min-height:0}
+@media(max-width:1000px){.visit-grid{grid-template-columns:1fr}.visit-grid>.location-card,.visit-grid>.reviews-card{height:760px}}
+@media(max-width:720px){.instagram-section-grid>.instagram-card{height:900px}.visit-grid{gap:24px}.visit-grid>.location-card,.visit-grid>.reviews-card{height:760px;padding:25px}}
