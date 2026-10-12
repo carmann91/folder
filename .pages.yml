@@ -153,7 +153,7 @@ content:
         options:
           min: 0
 - name: about
-  label: Chi siamo — Leo e Alessio
+  label: Chi siamo — Leonardo e Alessio
   type: file
   path: data/about.json
   format: json
@@ -184,4 +184,7 @@ content:
     type: string
   - name: instagramPostUrl
     label: Link al post Instagram
+    type: string
+  - name: signature
+    label: Firma
     type: string
