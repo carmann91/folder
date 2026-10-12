@@ -30,5 +30,37 @@
       "alt": "Calici di vino, fotografia dimostrativa"
     }
   ],
-  "reviewsUrl": "https://www.google.com/search?q=oma+osteria+moderna&si=APenkKm7iecQ4G6P-TsbSMFKIQtv3EFIqRAFw-i8uEbk55Z-_xpJQ4a2nzAWkPQ8bnK6J1lxRt5_AAeyA7vo8nFz47QqxcVk99hNHpvgG77CMCi0hvMNxBg%3D&uds=AJ5uw18zeF8z_P7IQbfeR8tV0KKT2rcc0EWHC07jtyAJEJWnE168y197ZmHjFRaqYEHcFTH02pe5AcEOVTJ2QY3jtWNxTBPwbHa8BgJoB44cnerchuQTNSg"
+  "reviewsUrl": "https://www.google.com/search?q=oma+osteria+moderna&si=APenkKm7iecQ4G6P-TsbSMFKIQtv3EFIqRAFw-i8uEbk55Z-_xpJQ4a2nzAWkPQ8bnK6J1lxRt5_AAeyA7vo8nFz47QqxcVk99hNHpvgG77CMCi0hvMNxBg%3D&uds=AJ5uw18zeF8z_P7IQbfeR8tV0KKT2rcc0EWHC07jtyAJEJWnE168y197ZmHjFRaqYEHcFTH02pe5AcEOVTJ2QY3jtWNxTBPwbHa8BgJoB44cnerchuQTNSg",
+  "mapEmbedUrl": "https://www.google.com/maps?q=41.924737%2C12.5250896&z=16&output=embed",
+  "instagramPosts": [],
+  "reviews": [
+    {
+      "author": "Alpha Chau",
+      "text": "Abbiamo cenato qui in Marzo. Una cena assolutamente eccellente. Lo chef è fantastico ed ha una cura estrema per gli ingredienti scegliendo metodi di cucina che…",
+      "rating": 5,
+      "ratingMax": 5,
+      "source": "Google",
+      "sourceUrl": "https://www.google.com/search?q=oma+osteria+moderna&si=APenkKm7iecQ4G6P-TsbSMFKIQtv3EFIqRAFw-i8uEbk55Z-_xpJQ4a2nzAWkPQ8bnK6J1lxRt5_AAeyA7vo8nFz47QqxcVk99hNHpvgG77CMCi0hvMNxBg%3D&uds=AJ5uw18zeF8z_P7IQbfeR8tV0KKT2rcc0EWHC07jtyAJEJWnE168y197ZmHjFRaqYEHcFTH02pe5AcEOVTJ2QY3jtWNxTBPwbHa8BgJoB44cnerchuQTNSg",
+      "date": "",
+      "excerpt": true
+    },
+    {
+      "author": "Recensore di TheFork",
+      "text": "Piatti originali molto curati, sapori delicati, il vino eccellente. Attenzione e gentilezza nel servizio. Ambiente silenzioso e distensivo, ideale per una cena tranquilla a due o con amici. Sicuramente torneremo 😊",
+      "rating": 10,
+      "ratingMax": 10,
+      "source": "TheFork",
+      "sourceUrl": "https://www.thefork.it/ristorante/oma-osteria-moderna-r856479",
+      "date": "",
+      "excerpt": false
+    },
+    {
+      "author": "Alessandro",
+      "text": "Ormai siamo andati parecchie volte e ci siamo sempre trovati benissimo. Gentili e attenti al cliente, cortesi e disponibili a ogni chiarimento e curiosità sul menù. Menù tra l’altro che cambia continuamente (e giustamente) sulla base della stagionalità dei prodotti e offre sempre alta qualità delle materie. Ottima anche la formula aperitivo. Dopo varie attività mediocri aperte in zona, finalmente una di qualità. Avanti così ragazzi!",
+      "source": "Google",
+      "sourceUrl": "https://www.google.com/maps/contrib/102973477504482805714/reviews?hl=it-IT",
+      "date": "",
+      "excerpt": false
+    }
+  ]
 }
