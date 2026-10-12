@@ -76,3 +76,7 @@ Le recensioni sono trascrizioni fornite dall’utente, non verificate tramite AP
 ## Anteprima chiara con schizzi graffiti
 
 `preview-graffiti.html` e `chi-siamo-graffiti.html` mantengono il layout chiaro con schizzi neri SVG ai margini, disegnati per questa anteprima. Le decorazioni non ricevono click e si ridimensionano su mobile. I file sono in `assets/graffiti` e lo stile aggiuntivo in `assets/graffiti-preview.css`. La homepage originale non cambia.
+
+## Versione principale approvata
+
+Il layout chiaro con schizzi graffiti è ora attivo su `index.html` e `chi-siamo.html`, tramite `assets/graffiti.css`, senza fascia di anteprima. Il font Sprite Graffiti resta solo nel titolo principale e le prenotazioni WhatsApp restano disattivate. Le pagine di anteprima conservano le loro varianti per riferimento.
