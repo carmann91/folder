@@ -30,9 +30,10 @@ function applySite(config) {
     }
   });
   status.textContent = valid ? '' : 'Contatto WhatsApp in aggiornamento.';
-  text('address', config.address || 'Indirizzo in aggiornamento');
+  text('address', config.address || (config.mapUrl ? 'Oma Osteria Moderna · Roma' : 'Indirizzo in aggiornamento'));
   text('hours', config.hours || 'Orari in aggiornamento');
   external('map-link', config.mapUrl);
+  if (external('reviews-link', config.reviewsUrl)) document.getElementById('reviews-card').hidden = false;
   if (external('instagram-link', config.instagramUrl)) document.getElementById('social-placeholder').hidden = true;
   if (external('menu-link', config.menuUrl)) text('menu-link', 'Esplora il menu ↗');
   for (const [id, key] of [['hero-title-main','heroTitle'],['hero-title-emphasis','heroEmphasis'],['hero-description','heroDescription'],['intro-lead','introLead'],['intro-text','introText'],['intro-extra','introExtra']]) text(id, config[key]);

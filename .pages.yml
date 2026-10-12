@@ -31,6 +31,9 @@ content:
   - name: instagramUrl
     label: Link HTTPS Instagram
     type: string
+  - name: reviewsUrl
+    label: Link HTTPS recensioni Google
+    type: string
   - name: menuUrl
     label: Menu esterno HTTPS (opzionale)
     type: string

@@ -3,8 +3,8 @@
   "bookingMessage": "Ciao Oma Osteria Moderna! Vorrei richiedere una prenotazione.\nData: [inserisci la data]\nOrario: [inserisci l’orario]\nNumero di persone: [inserisci il numero]\nNome: [inserisci il nome]\nPotete confermarmi la disponibilità? Grazie!",
   "address": "",
   "hours": "",
-  "mapUrl": "",
-  "instagramUrl": "",
+  "mapUrl": "https://www.google.it/maps/place/Oma+osteria+moderna/@41.924737,12.5225147,17z/data=!3m1!4b1!4m6!3m5!1s0x132f61003a4e7681:0x6c69ee4fd56adb8d!8m2!3d41.924737!4d12.5250896!16s%2Fg%2F11x8xvv4_r?entry=ttu",
+  "instagramUrl": "https://www.instagram.com/oma_osteriamoderna/",
   "menuUrl": "",
   "heroTitle": "Il gusto di stare",
   "heroEmphasis": "bene, insieme.",
@@ -29,5 +29,6 @@
       "src": "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=900&q=85",
       "alt": "Calici di vino, fotografia dimostrativa"
     }
-  ]
+  ],
+  "reviewsUrl": "https://www.google.com/search?q=oma+osteria+moderna&si=APenkKm7iecQ4G6P-TsbSMFKIQtv3EFIqRAFw-i8uEbk55Z-_xpJQ4a2nzAWkPQ8bnK6J1lxRt5_AAeyA7vo8nFz47QqxcVk99hNHpvgG77CMCi0hvMNxBg%3D&uds=AJ5uw18zeF8z_P7IQbfeR8tV0KKT2rcc0EWHC07jtyAJEJWnE168y197ZmHjFRaqYEHcFTH02pe5AcEOVTJ2QY3jtWNxTBPwbHa8BgJoB44cnerchuQTNSg"
 }
