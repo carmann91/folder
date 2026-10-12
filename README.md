@@ -28,7 +28,7 @@ Modificare solo `assets/config.js` per impostare:
 - `whatsappNumber`: configurato a ``, assumendo il prefisso italiano +39 per il numero fornito .
 - `bookingMessage`: testo precompilato, con data, ora, persone e nome da completare direttamente su WhatsApp.
 - `address` e `hours`: indirizzo e orari verificati, attualmente segnaposto.
-- `mapUrl`, `instagramUrl`, `menuUrl`: URL HTTPS opzionali. I collegamenti non configurati sono nascosti; senza un menu, il pulsante invita a chiederlo su WhatsApp.
+- `mapUrl`, `instagramUrl`, `menuUrl`: URL HTTPS opzionali. I collegamenti non configurati sono nascosti; senza un menu esterno, il pulsante apre la sezione del menu romano nella pagina.
 
 Il click apre WhatsApp con il messaggio precompilato. **Non invia automaticamente il messaggio e non conferma una prenotazione**: il cliente lo completa e lo invia, e il ristorante conferma la disponibilità.
 
@@ -49,3 +49,7 @@ I testi sono una proposta editoriale da approvare. Nessun indirizzo, orario, men
 ## Verifica manuale
 
 Controllare navigazione desktop/mobile, menu mobile (anche con Escape), link WhatsApp e testo precompilato, e assenza di scorrimento orizzontale. Indirizzo e orari restano esplicitamente in aggiornamento finché non configurati.
+
+## Menu romano dimostrativo
+
+La pagina include 18 proposte tra antipasti, primi, secondi, contorni e dolci. Piatti e prezzi sono illustrativi e chiaramente segnalati come da confermare con il ristorante. Modificare la sezione `#menu` in `index.html` per sostituirli con il menu approvato.
