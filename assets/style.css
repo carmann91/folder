@@ -122,3 +122,6 @@
 .hero-content h1,.hero-content h1 em{font-family:'Sprite Graffiti',Georgia,serif;font-style:normal;font-weight:400;letter-spacing:.01em}
 
 .button:disabled,.nav-contact:disabled{cursor:not-allowed;opacity:.55}.button:disabled{border:0;font-family:inherit}.header nav button.nav-contact{background:transparent;border:0;border-bottom:1px solid var(--wine);font:inherit;padding:9px 0}.button.light:disabled:hover{background:var(--paper)}.button.dark:disabled:hover{background:var(--wine)}
+
+/* Navigazione sempre visibile durante lo scorrimento. */
+.header{position:sticky;top:0;z-index:50;box-shadow:0 3px 18px rgba(52,43,41,.06)}.skip{z-index:100}html{scroll-padding-top:122px}@media(max-width:720px){html{scroll-padding-top:102px}.header nav{max-height:calc(100dvh - 86px);overflow-y:auto}}
