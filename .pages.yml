@@ -152,3 +152,36 @@ content:
         required: true
         options:
           min: 0
+- name: about
+  label: Chi siamo — Leo e Alessio
+  type: file
+  path: data/about.json
+  format: json
+  fields:
+  - name: title
+    label: Titolo
+    type: string
+  - name: titleEmphasis
+    label: Titolo in corsivo
+    type: string
+  - name: lead
+    label: Introduzione breve
+    type: string
+  - name: intro
+    label: Presentazione
+    type: text
+  - name: story
+    label: La nostra idea di osteria
+    type: text
+  - name: storyExtra
+    label: Secondo paragrafo
+    type: text
+  - name: photo
+    label: Foto di Leo e Alessio (carica la foto scelta)
+    type: image
+  - name: photoAlt
+    label: Testo alternativo foto
+    type: string
+  - name: instagramPostUrl
+    label: Link al post Instagram
+    type: string
