@@ -1,0 +1,33 @@
+{
+  "whatsappNumber": "393890849395",
+  "bookingMessage": "Ciao Oma Osteria Moderna! Vorrei richiedere una prenotazione.\nData: [inserisci la data]\nOrario: [inserisci l’orario]\nNumero di persone: [inserisci il numero]\nNome: [inserisci il nome]\nPotete confermarmi la disponibilità? Grazie!",
+  "address": "",
+  "hours": "",
+  "mapUrl": "",
+  "instagramUrl": "",
+  "menuUrl": "",
+  "heroTitle": "Il gusto di stare",
+  "heroEmphasis": "bene, insieme.",
+  "heroDescription": "Lo spirito dell’osteria.\nLa curiosità di guardare avanti.",
+  "introLead": "Un luogo da vivere, prima ancora che da raccontare.",
+  "introText": "Oma è la nostra idea di osteria moderna: una tavola accogliente, il piacere della condivisione e una cucina che mette al centro il gusto.",
+  "introExtra": "Ci piace immaginare ogni incontro come un invito a rallentare. A scegliere un altro calice. A lasciare spazio alle conversazioni.",
+  "photos": [
+    {
+      "src": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=2200&q=85",
+      "alt": "Atmosfera calda di una sala ristorante, fotografia dimostrativa"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=1200&q=85",
+      "alt": "Un piatto di pasta, fotografia dimostrativa"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1000&q=85",
+      "alt": "Interni di un ristorante, fotografia dimostrativa"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=900&q=85",
+      "alt": "Calici di vino, fotografia dimostrativa"
+    }
+  ]
+}

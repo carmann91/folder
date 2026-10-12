@@ -1,0 +1,102 @@
+media:
+  input: assets/uploads
+  output: assets/uploads
+  categories:
+  - image
+  rename: safe
+content:
+- name: site
+  label: Contatti e homepage
+  type: file
+  path: data/site.json
+  format: json
+  fields:
+  - name: whatsappNumber
+    label: Numero WhatsApp (es. 393890849395)
+    type: string
+    required: true
+  - name: bookingMessage
+    label: Messaggio richiesta prenotazione
+    type: text
+    required: true
+  - name: address
+    label: Indirizzo
+    type: text
+  - name: hours
+    label: Orari
+    type: text
+  - name: mapUrl
+    label: Link HTTPS Google Maps
+    type: string
+  - name: instagramUrl
+    label: Link HTTPS Instagram
+    type: string
+  - name: menuUrl
+    label: Menu esterno HTTPS (opzionale)
+    type: string
+  - name: heroTitle
+    label: Titolo principale
+    type: string
+  - name: heroEmphasis
+    label: Titolo in corsivo
+    type: string
+  - name: heroDescription
+    label: Testo copertina
+    type: text
+  - name: introLead
+    label: Introduzione breve
+    type: string
+  - name: introText
+    label: Testo osteria
+    type: text
+  - name: introExtra
+    label: Secondo paragrafo osteria
+    type: text
+  - name: photos
+    label: 'Fotografie (ordine: copertina, cucina, sala, vino)'
+    type: object
+    list: true
+    fields:
+    - name: src
+      label: Immagine
+      type: image
+    - name: alt
+      label: Descrizione accessibile
+      type: string
+      required: true
+- name: menu
+  label: Menu
+  type: file
+  path: data/menu.json
+  format: json
+  fields:
+  - name: note
+    label: Nota menu (lasciare vuota quando approvato)
+    type: text
+  - name: categories
+    label: Categorie del menu
+    type: object
+    list: true
+    fields:
+    - name: title
+      label: Nome categoria
+      type: string
+      required: true
+    - name: dishes
+      label: Piatti
+      type: object
+      list: true
+      fields:
+      - name: name
+        label: Nome piatto
+        type: string
+        required: true
+      - name: description
+        label: Descrizione e ingredienti
+        type: text
+      - name: price
+        label: Prezzo in euro
+        type: number
+        required: true
+        options:
+          min: 0

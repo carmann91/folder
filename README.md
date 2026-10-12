@@ -1,55 +1,52 @@
-# Oma Osteria Moderna — demo statica
+# Oma Osteria Moderna — sito e gestione contenuti
 
-Landing page responsive in italiano, pronta per GitHub e raw.githack.com. HTML, CSS e JavaScript: nessuna installazione, build, API, cookie di tracciamento o modulo di prenotazione.
+Sito statico responsive con menu romano e prenotazioni via WhatsApp. Il pannello **Pages CMS** modifica i file JSON su GitHub: nessun database, password nel sito o server applicativo richiesto.
 
-## Anteprima locale
+## Attivare il pannello
 
-Dalla cartella del progetto:
+1. Aprire **https://app.pagescms.org/** e accedere con l’account GitHub che amministra `carmann91/folder`.
+2. Quando richiesto, installare/autorizzare la GitHub App di Pages CMS, selezionando solo il repository `folder`.
+3. Selezionare `carmann91/folder` e il ramo **master**. La configurazione `.pages.yml` mostra **Menu** e **Contatti e homepage**.
+4. Modificare i campi e salvare. I salvataggi producono commit nel repository: non occorre modificare codice manualmente.
+
+L’accesso e l’autorizzazione della GitHub App devono essere effettuati dal proprietario. La configurazione è predisposta, ma l’autenticazione del pannello non è stata attivata o verificata con il suo account.
+
+### Cosa puoi modificare
+
+- **Menu**: categorie, ordine, piatti, descrizioni, prezzi numerici in euro e nota dimostrativa. Aggiungi o rimuovi elementi nelle liste.
+- **Contatti e homepage**: WhatsApp, messaggio precompilato, indirizzo, orari, link a mappa e Instagram, eventuale menu esterno, titolo e testi introduttivi.
+- **Fotografie**: sostituisci le quattro immagini mantenendo l’ordine copertina, cucina, sala e vino. Carica fotografie autorizzate e descrivile nel testo alternativo. La libreria salva i file in `assets/uploads`.
+
+Per WhatsApp inserire il numero internazionale con prefisso: `393890849395`. Il click apre un messaggio da completare e inviare: non conferma automaticamente la prenotazione.
+
+## Pubblicare con dominio personalizzato
+
+Su Netlify collegare il repository, ramo `master`, comando di build vuoto e directory di pubblicazione `.`. Attivare la pubblicazione automatica dei commit. I salvataggi dal CMS avvieranno una nuova pubblicazione; il sito si aggiorna al termine del deploy. Poi aggiungere il proprio dominio e seguire le indicazioni DNS dell’hosting. La configurazione Netlify, il dominio e i DNS non sono ancora stati attivati.
+
+### Demo GitHack
+
+Usare **https://raw.githack.com/carmann91/folder/master/index.html** per seguire le modifiche del CMS. Il repository deve essere pubblico. I link a un commit specifico sono versioni fisse e non seguono gli aggiornamenti. La cache del servizio può ritardare la visualizzazione; `cache: no-cache` nel browser non elimina la cache della CDN.
+
+## Sviluppo locale
 
 ```sh
 python3 -m http.server 8000
 ```
 
-Aprire la pagina nel browser attraverso il server locale. È possibile anche aprire direttamente `index.html`.
+Aprire il sito tramite il server locale. L’apertura diretta con `file://` non è supportata, perché il sito carica i contenuti JSON attraverso richieste HTTP.
 
-## Pubblicazione su GitHack
+## File
 
-1. Caricare `index.html`, la cartella `assets` e questo README nella radice del repository `carmann91/folder`, mantenendo la struttura.
-2. Su GitHub aprire `index.html` e copiare il suo URL, ad esempio `https://github.com/carmann91/folder/blob/master/index.html` (usare il nome del ramo realmente creato).
-3. Incollare l’URL su **https://raw.githack.com/** e utilizzare il collegamento generato per la demo.
-4. Per una demo stabile, usare l’URL di un commit specifico al posto del nome del ramo. I collegamenti CDN possono mantenere una versione precedente in cache.
+- `.pages.yml`: campi del pannello Pages CMS.
+- `data/site.json`: contatti, testi e fotografie.
+- `data/menu.json`: menu modificabile.
+- `index.html`: struttura e contenuti dimostrativi di riserva.
+- `assets/main.js`: caricamento dati, rendering sicuro e WhatsApp.
+- `assets/style.css`: grafica desktop e mobile.
+- `assets/uploads`: immagini caricate dal pannello.
 
-Il ramo `master` inizialmente non esisteva sul repository remoto. La creazione dei file non li pubblica automaticamente: è necessario caricarli o effettuare commit e push su GitHub.
+Le modifiche CMS sono mostrate con JavaScript. Se il caricamento del menu fallisce, il sito segnala il problema e mostra il menu dimostrativo iniziale, non un menu confermato. Se i contatti non si caricano, WhatsApp non viene attivato con un vecchio numero. I testi aggiornati dal CMS non vengono scritti nell’HTML di riserva: anteprime social e crawler senza JavaScript continuano a leggere il contenuto iniziale.
 
-## Dati del ristorante
+## Contenuti da approvare
 
-Modificare solo `assets/config.js` per impostare:
-
-- `whatsappNumber`: configurato a `393890849395`, assumendo il prefisso italiano +39 per il numero fornito 3890849395.
-- `bookingMessage`: testo precompilato, con data, ora, persone e nome da completare direttamente su WhatsApp.
-- `address` e `hours`: indirizzo e orari verificati, attualmente segnaposto.
-- `mapUrl`, `instagramUrl`, `menuUrl`: URL HTTPS opzionali. I collegamenti non configurati sono nascosti; senza un menu esterno, il pulsante apre la sezione del menu romano nella pagina.
-
-Il click apre WhatsApp con il messaggio precompilato. **Non invia automaticamente il messaggio e non conferma una prenotazione**: il cliente lo completa e lo invia, e il ristorante conferma la disponibilità.
-
-## Immagini e contenuti
-
-Le quattro fotografie sono dimostrative, caricate da Unsplash; non raffigurano necessariamente Oma. Richiedono connessione e accesso a `images.unsplash.com`. Per una demo autosufficiente, sostituirle con fotografie autorizzate del ristorante, salvate in `assets`, e aggiornare i percorsi `src` e i testi alternativi in `index.html`.
-
-I testi sono una proposta editoriale da approvare. Nessun indirizzo, orario, menu, premio o altro dato commerciale è stato inventato. Il sito santiniroma.it non era raggiungibile dall’ambiente: questa è una proposta originale, non una riproduzione verificata di quel sito. Prima dell’uso pubblico sostituire i dati mancanti e la dicitura di demo, verificare i diritti sui materiali e inserire gli eventuali dati legali dell’attività.
-
-## Struttura
-
-- `index.html`: contenuti e sezioni.
-- `assets/style.css`: layout desktop/mobile, colori e tipografia.
-- `assets/config.js`: dati configurabili e messaggio WhatsApp.
-- `assets/main.js`: link WhatsApp, menu mobile e dati dei contatti.
-- `assets/favicon.svg`: icona Oma.
-
-## Verifica manuale
-
-Controllare navigazione desktop/mobile, menu mobile (anche con Escape), link WhatsApp e testo precompilato, e assenza di scorrimento orizzontale. Indirizzo e orari restano esplicitamente in aggiornamento finché non configurati.
-
-## Menu romano dimostrativo
-
-La pagina include 18 proposte tra antipasti, primi, secondi, contorni e dolci. Piatti e prezzi sono illustrativi e chiaramente segnalati come da confermare con il ristorante. Modificare la sezione `#menu` in `index.html` per sostituirli con il menu approvato.
+I 18 piatti e i prezzi sono dimostrativi. Le immagini esterne Unsplash non raffigurano necessariamente Oma. Indirizzo e orari sono da completare. Sostituire i materiali con quelli reali, verificare i dati e inserire gli eventuali dati legali prima del lancio pubblico. Il sito di riferimento Santini non era accessibile: questa grafica è una proposta originale.
