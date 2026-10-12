@@ -64,3 +64,7 @@ I collegamenti forniti sono configurati in `data/site.json` e modificabili da Pa
 Maps e Instagram sono risorse esterne caricate dal browser del visitatore. Il caricamento effettivo di tali servizi non è stato verificato nell’ambiente, che ne blocca l’accesso.
 
 Le recensioni sono trascrizioni fornite dall’utente, non verificate tramite API. Dal CMS è possibile modificarne fonte, link originale, voto facoltativo, scala 5/10 e indicazione di estratto.
+
+## Chi siamo — Leo e Alessio
+
+`chi-siamo.html` è collegata alla navigazione principale. Dal CMS, nella sezione dedicata, si modificano testi e foto. I testi sono una proposta editoriale, senza ruoli, biografie o esperienze non forniti. Il post Instagram è incorporato come alternativa iniziale: l’incorporamento non garantisce la selezione della seconda foto del carosello. Per usare esattamente quella foto, caricare il file autorizzato nel campo `photo` di `data/about.json` tramite CMS. Il link al post conserva `img_index=2`. Il caricamento effettivo di Instagram non è verificabile nell’ambiente.
