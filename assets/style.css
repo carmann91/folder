@@ -4,8 +4,63 @@
 .roman-menu{background:var(--paper)}.menu-heading{max-width:670px;margin-bottom:55px}.menu-heading>p:not(.eyebrow){margin-top:22px;color:#6c625b}.menu-heading .menu-demo{font-size:12px;border-left:2px solid var(--wine);padding-left:15px}.menu-grid{display:grid;grid-template-columns:1fr 1fr;column-gap:8%;row-gap:45px}.menu-category h3{font:29px/1.2 Georgia,serif;color:var(--wine);padding-bottom:18px;border-bottom:1px solid var(--wine)}.menu-category ul{list-style:none;padding:0;margin:0}.menu-category li{padding:20px 0;border-bottom:1px solid var(--line)}.dish-heading{display:flex;justify-content:space-between;align-items:baseline;gap:18px}.dish-heading h4{margin:0;font-size:15px;font-weight:500}.dish-price{white-space:nowrap;font-size:14px;color:var(--wine)}.menu-category li p{margin-top:6px;font-size:12px;line-height:1.6;color:#6c625b}.menu-bottom{margin-top:45px;padding-top:25px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:35px;align-items:center}.menu-bottom p{font-size:12px;color:#6c625b;max-width:470px}.menu-bottom .button{flex-shrink:0}@media(max-width:720px){.menu-heading{margin-bottom:35px}.menu-grid{grid-template-columns:1fr;row-gap:35px}.menu-bottom{align-items:flex-start;flex-direction:column;gap:22px}}
 #hero-description{white-space:pre-line}#menu-status{font-size:13px;color:var(--wine);border-left:2px solid currentColor;padding:12px 16px;margin-bottom:28px}
 
-.contact-details .reviews-card{margin-top:28px;padding:28px;background:var(--paper);border:1px solid var(--line)}.reviews-card .eyebrow{font-size:9px;margin-bottom:15px}.reviews-card h3{font:26px/1.2 Georgia,serif;text-transform:none;letter-spacing:-.6px;margin-bottom:15px}.reviews-card>p:not(.eyebrow){font-size:13px;line-height:1.7;color:#6c625b}.reviews-card .text-link{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-top:15px;font-size:11px}
-
-.map-preview{margin-top:18px;border:1px solid var(--line);background:var(--paper)}.map-preview iframe{display:block;width:100%;height:280px;border:0}.social-previews{background:#ede7dd}.social-heading{margin-bottom:45px}.social-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:start}.instagram-card,.social-grid .reviews-card{margin:0;padding:30px;background:var(--paper);border:1px solid var(--line)}.instagram-card h3,.social-grid .reviews-card h3{font:30px/1.2 Georgia,serif;letter-spacing:-.5px;margin-bottom:25px}.instagram-card .eyebrow,.social-grid .reviews-card .eyebrow{margin-bottom:16px}.instagram-frame{display:block;width:100%;height:520px;min-width:0;border:0;background:white;margin-bottom:20px}.embed-help,.reviews-empty{font-size:12px;color:#6c625b;margin:15px 0}.review-preview{padding:22px 0;border-bottom:1px solid var(--line)}.review-preview:first-child{padding-top:0}.review-stars{color:var(--wine);font-size:19px;letter-spacing:3px;margin-bottom:13px}.review-preview blockquote{margin:0;font:19px/1.6 Georgia,serif;white-space:pre-line;overflow-wrap:anywhere}.review-preview figcaption{display:flex;justify-content:space-between;gap:15px;margin-top:18px;font-size:11px}.review-preview figcaption span{color:#6c625b}.social-grid .reviews-card .text-link{margin-top:24px}.social-grid>*{min-width:0}@media(max-width:720px){.social-grid{grid-template-columns:1fr;gap:25px}.instagram-card,.social-grid .reviews-card{padding:22px}.instagram-frame{height:490px}.map-preview iframe{height:260px}.review-preview figcaption{flex-wrap:wrap}}
-
-.review-excerpt{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:#766c62;margin-bottom:10px}.review-preview figcaption a{color:var(--wine);text-decoration:underline;text-underline-offset:3px}
+/* Anteprime e contatti: stessa palette e tipografia delle sezioni editoriali. */
+.social-previews{background:#ede7dd}
+.social-heading{margin-bottom:60px;max-width:850px}
+.social-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;align-items:stretch}
+.instagram-card,.reviews-card{display:flex;flex-direction:column;min-width:0;margin:0;padding:clamp(30px,3.5vw,56px);background:var(--paper);border:1px solid var(--line)}
+.instagram-card .eyebrow,.reviews-card .eyebrow{margin-bottom:22px;color:var(--wine)}
+.instagram-card h3,.reviews-card h3{font:clamp(32px,3.1vw,48px)/1.12 Georgia,serif;letter-spacing:-1.5px;margin-bottom:30px;color:var(--ink)}
+.card-intro{font-size:14px;line-height:1.8;color:#6c625b;margin:-10px 0 30px}
+#instagram-previews{flex:1;display:flex;flex-direction:column;gap:24px;min-width:0}
+.instagram-frame{display:block;flex:1;width:100%;height:720px;min-height:640px;min-width:0;border:1px solid var(--line);background:white}
+.embed-help,.reviews-empty{font-size:12px;line-height:1.8;color:#6c625b;margin:22px 0 8px}
+.instagram-card>.text-link,.reviews-card>.text-link{display:flex;align-items:center;justify-content:space-between;width:100%;gap:20px;padding:19px 0 12px;margin-top:20px;font-size:12px}
+.reviews-card>.text-link{margin-top:auto;padding-top:32px}
+#review-previews{margin-bottom:24px}
+.review-preview{padding:30px 0;border-bottom:1px solid var(--line)}
+.review-preview:first-child{padding-top:0}
+.review-stars{color:var(--wine);font-size:20px;letter-spacing:3px;margin-bottom:18px}
+.review-preview blockquote{margin:0;font:clamp(18px,1.45vw,22px)/1.65 Georgia,serif;white-space:pre-line;overflow-wrap:anywhere;color:var(--ink)}
+.review-preview figcaption{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-top:22px;font-size:12px}
+.review-preview figcaption strong{font-weight:500}
+.review-preview figcaption span{color:#6c625b}
+.review-preview figcaption a{color:var(--wine);text-decoration:underline;text-underline-offset:4px}
+.review-excerpt{font-size:9px;text-transform:uppercase;letter-spacing:1.5px;color:#766c62;margin-bottom:12px}
+.contact{grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);column-gap:12%;row-gap:65px}
+.contact-details{padding-top:28px}
+.contact-details>div{padding:26px 0}
+.contact-details p{font-size:14px}
+.location-card{grid-column:1/-1;min-width:0;border:1px solid var(--line);background:var(--paper);padding:clamp(28px,3.5vw,52px)}
+.location-heading{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;margin-bottom:32px}
+.location-heading .eyebrow{margin-bottom:18px;color:var(--wine)}
+.location-heading h3{font:clamp(34px,3.5vw,54px)/1.12 Georgia,serif;letter-spacing:-1.5px;margin-bottom:16px}
+.location-heading #address{font-size:14px;color:#6c625b;white-space:pre-line}
+.location-heading .text-link{flex-shrink:0;margin-bottom:3px}
+.map-preview{border:1px solid var(--line);background:#e9e2d6}
+.map-preview iframe{display:block;width:100%;height:480px;border:0}
+@media(max-width:1000px){
+ .social-grid{grid-template-columns:1fr;gap:32px}
+ .instagram-card,.reviews-card{padding:40px}
+ .instagram-frame{height:720px;min-height:640px;flex:none}
+ .instagram-card h3,.reviews-card h3{font-size:42px}
+ .review-preview blockquote{font-size:21px}
+ .contact{column-gap:8%}
+ .location-heading{align-items:flex-start;flex-direction:column;gap:12px}
+}
+@media(max-width:720px){
+ .social-heading{margin-bottom:36px}
+ .social-grid{gap:24px}
+ .instagram-card,.reviews-card,.location-card{padding:25px}
+ .instagram-card h3,.reviews-card h3{font-size:34px;letter-spacing:-1px;margin-bottom:25px}
+ .instagram-frame{height:620px;min-height:0}
+ .review-preview{padding:25px 0}
+ .review-preview blockquote{font-size:19px;line-height:1.7}
+ .review-preview figcaption{flex-wrap:wrap;gap:10px;font-size:11px}
+ .contact{grid-template-columns:minmax(0,1fr);row-gap:35px}
+ .contact-details{padding-top:0}
+ .location-heading{margin-bottom:25px}
+ .location-heading h3{font-size:36px;letter-spacing:-1px}
+ .location-heading .text-link{width:100%;justify-content:space-between;font-size:11px}
+ .map-preview iframe{height:360px}
+}
