@@ -142,6 +142,14 @@ function applyPreviews(config) {
     }
     if (review.excerpt) card.append(element('p', 'Estratto della recensione', 'review-excerpt'));
     const quote = element('blockquote', review.text);
+    if (review.text.length > 320) {
+      const cut = review.text.lastIndexOf(' ', 240);
+      quote.textContent = review.text.slice(0, cut > 0 ? cut : 240) + '…';
+      const details = element('details', undefined, 'review-full');
+      const summary = element('summary', 'Leggi il testo completo');
+      details.append(summary, element('p', review.text));
+      quote.append(details);
+    }
     const caption = element('figcaption');
     caption.append(element('strong', review.author));
     const sourceText = `${review.source || 'Google'}${review.date ? ' · ' + review.date : ''}`;
