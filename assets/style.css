@@ -113,3 +113,5 @@
 #about-status{font-size:12px;margin-top:20px}
 @media(max-width:1000px){.header nav{gap:18px}.about-hero{gap:5%}.about-portrait{padding:18px}.about-portrait iframe,.about-portrait>img{height:600px}}
 @media(max-width:720px){.about-hero,.about-story{grid-template-columns:minmax(0,1fr);gap:40px}.about-intro h1{font-size:49px}.about-portrait iframe,.about-portrait>img{height:570px}.about-story-copy{padding-top:0}.about-intro .about-lead{font-size:23px}}
+
+.about-story-copy .about-signature{font:italic 26px/1.4 Georgia,serif;color:var(--wine);margin-top:30px}.about-portrait>img{height:auto;object-fit:contain}

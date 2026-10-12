@@ -9,7 +9,7 @@ document.getElementById('year').textContent = new Date().getFullYear();
 function safeUrl(value) { try { const u = new URL(value,document.baseURI); return u.protocol === 'https:' || u.origin === location.origin ? u : null; } catch { return null; } }
 async function load(path) { const r = await fetch(path,{cache:'no-cache'}); if (!r.ok) throw Error(r.status); return r.json(); }
 load('data/about.json').then(data => {
-  for (const [id,key] of [['about-title-main','title'],['about-title-emphasis','titleEmphasis'],['about-lead','lead'],['about-intro','intro'],['about-story-main','story'],['about-story-extra','storyExtra']]) {
+  for (const [id,key] of [['about-title-main','title'],['about-title-emphasis','titleEmphasis'],['about-lead','lead'],['about-intro','intro'],['about-story-main','story'],['about-story-extra','storyExtra'],['about-signature','signature']]) {
     if (typeof data[key] === 'string') document.getElementById(id).textContent = data[key];
   }
   const photo = data.photo && safeUrl(data.photo);
