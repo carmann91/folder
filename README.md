@@ -14,7 +14,7 @@ L’accesso e l’autorizzazione della GitHub App devono essere effettuati dal p
 ### Cosa puoi modificare
 
 - **Menu**: categorie, ordine, piatti, descrizioni, prezzi numerici in euro e nota dimostrativa. Aggiungi o rimuovi elementi nelle liste.
-- **Contatti e homepage**: WhatsApp, messaggio precompilato, indirizzo, orari, link a mappa e Instagram, eventuale menu esterno, titolo e testi introduttivi.
+- **Contatti e homepage**: WhatsApp, messaggio precompilato, indirizzo, orari, link a Google Maps, Instagram e recensioni Google, eventuale menu esterno, titolo e testi introduttivi.
 - **Fotografie**: sostituisci le quattro immagini mantenendo l’ordine copertina, cucina, sala e vino. Carica fotografie autorizzate e descrivile nel testo alternativo. La libreria salva i file in `assets/uploads`.
 
 Per WhatsApp inserire il numero internazionale con prefisso: ``. Il click apre un messaggio da completare e inviare: non conferma automaticamente la prenotazione.
@@ -50,3 +50,7 @@ Le modifiche CMS sono mostrate con JavaScript. Se il caricamento del menu fallis
 ## Contenuti da approvare
 
 I 18 piatti e i prezzi sono dimostrativi. Le immagini esterne Unsplash non raffigurano necessariamente Oma. Indirizzo e orari sono da completare. Sostituire i materiali con quelli reali, verificare i dati e inserire gli eventuali dati legali prima del lancio pubblico. Il sito di riferimento Santini non era accessibile: questa grafica è una proposta originale.
+
+## Maps, Instagram e recensioni
+
+I collegamenti forniti sono configurati in `data/site.json` e modificabili da Pages CMS. Il box recensioni apre la pagina Google in una nuova scheda; non incorpora, copia o aggiorna automaticamente recensioni o valutazioni. Non richiede API key o widget esterni. Il link Google Maps apre la scheda del ristorante; l’indirizzo stradale resta da completare nel CMS.
