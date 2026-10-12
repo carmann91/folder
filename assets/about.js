@@ -22,7 +22,3 @@ load('data/about.json').then(data => {
     if (match) { document.getElementById('about-post-link').href = post.href; document.getElementById('about-instagram').src = `https://www.instagram.com/${match[1]}/${match[2]}/embed/`; }
   }
 }).catch(() => { document.getElementById('about-status').textContent = 'I contenuti aggiornati non sono disponibili. Riprova più tardi.'; });
-load('data/site.json').then(config => {
-  const number = String(config.whatsappNumber || '').replace(/[\s+()-]/g,''); if (!/^[1-9]\d{6,14}$/.test(number)) return;
-  document.querySelectorAll('[data-whatsapp]').forEach(link => { link.href = `https://wa.me/${number}?text=${encodeURIComponent(config.bookingMessage || 'Ciao Oma! Vorrei richiedere una prenotazione.')}`; link.target = '_blank'; link.rel = 'noopener noreferrer'; });
-}).catch(() => {});

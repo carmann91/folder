@@ -18,18 +18,7 @@ function external(id, value) {
   return true;
 }
 function applySite(config) {
-  const number = String(config.whatsappNumber || '').replace(/[\s+()-]/g, '');
-  const valid = /^[1-9]\d{6,14}$/.test(number);
-  document.querySelectorAll('[data-whatsapp]').forEach(link => {
-    if (valid) {
-      link.href = `https://wa.me/${number}?text=${encodeURIComponent(config.bookingMessage || 'Ciao Oma Osteria Moderna! Vorrei richiedere una prenotazione.')}`;
-      link.target = '_blank'; link.rel = 'noopener noreferrer';
-    } else {
-      link.href = '#contatti';
-      link.addEventListener('click', () => { status.textContent = 'Contatto WhatsApp non disponibile. Riprova più tardi.'; });
-    }
-  });
-  status.textContent = valid ? '' : 'Contatto WhatsApp in aggiornamento.';
+  status.textContent = '';
   text('address', config.address || (config.mapUrl ? 'Oma Osteria Moderna · Roma' : 'Indirizzo in aggiornamento'));
   text('hours', config.hours || 'Orari in aggiornamento');
   external('map-link', config.mapUrl);
