@@ -60,7 +60,9 @@
       "source": "Google",
       "sourceUrl": "https://www.google.com/maps/contrib/102973477504482805714/reviews?hl=it-IT",
       "date": "",
-      "excerpt": false
+      "excerpt": false,
+      "rating": 5,
+      "ratingMax": 5
     }
   ]
 }
