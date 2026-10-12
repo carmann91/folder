@@ -67,6 +67,55 @@ content:
       label: Descrizione accessibile
       type: string
       required: true
+  - name: mapEmbedUrl
+    label: URL incorporamento Google Maps
+    type: string
+  - name: instagramPosts
+    label: Post Instagram pubblici da mostrare
+    type: object
+    list: true
+    fields:
+    - name: url
+      label: Link al post o reel Instagram
+      type: string
+      required: true
+  - name: reviews
+    label: Recensioni reali da mostrare (trascrizione manuale)
+    type: object
+    list: true
+    fields:
+    - name: author
+      label: Nome pubblico autore
+      type: string
+      required: true
+    - name: text
+      label: Testo recensione
+      type: text
+      required: true
+    - name: rating
+      label: Voto (opzionale, solo se noto)
+      type: number
+      options:
+        min: 1
+        max: 10
+    - name: date
+      label: Data recensione (opzionale)
+      type: string
+    - name: ratingMax
+      label: 'Scala del voto: 5 per Google, 10 per TheFork'
+      type: number
+      options:
+        min: 5
+        max: 10
+    - name: source
+      label: Fonte (Google o TheFork)
+      type: string
+    - name: sourceUrl
+      label: Link HTTPS recensione originale
+      type: string
+    - name: excerpt
+      label: Testo parziale / estratto
+      type: boolean
 - name: menu
   label: Menu
   type: file

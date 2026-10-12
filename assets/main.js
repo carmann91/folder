@@ -33,6 +33,7 @@ function applySite(config) {
   text('address', config.address || (config.mapUrl ? 'Oma Osteria Moderna · Roma' : 'Indirizzo in aggiornamento'));
   text('hours', config.hours || 'Orari in aggiornamento');
   external('map-link', config.mapUrl);
+  applyPreviews(config);
   if (external('reviews-link', config.reviewsUrl)) document.getElementById('reviews-card').hidden = false;
   if (external('instagram-link', config.instagramUrl)) document.getElementById('social-placeholder').hidden = true;
   if (external('menu-link', config.menuUrl)) text('menu-link', 'Esplora il menu ↗');
@@ -94,3 +95,63 @@ loadJson('data/menu.json').then(applyMenu).catch(() => {
   const notice = document.getElementById('menu-status'); notice.hidden = false;
   notice.textContent = 'Menu aggiornato non disponibile. Le proposte qui sotto sono la versione dimostrativa iniziale: contattaci per conferma.';
 });
+
+function googleEmbedUrl(value) {
+  try {
+    const url = new URL(value);
+    if (url.protocol !== 'https:' || !['www.google.com', 'www.google.it', 'maps.google.com'].includes(url.hostname) || !url.pathname.startsWith('/maps')) return null;
+    return url.href;
+  } catch { return null; }
+}
+function instagramEmbedUrl(value) {
+  try {
+    const url = new URL(value);
+    if (url.protocol !== 'https:' || !['www.instagram.com','instagram.com'].includes(url.hostname)) return null;
+    const path = url.pathname.match(/^\/(p|reel|tv)\/([A-Za-z0-9_-]+)\/?$/);
+    if (path) return `https://www.instagram.com/${path[1]}/${path[2]}/embed/`;
+    const profile = url.pathname.match(/^\/([A-Za-z0-9_.]+)\/?$/);
+    return profile ? `https://www.instagram.com/${profile[1]}/embed/` : null;
+  } catch { return null; }
+}
+function applyPreviews(config) {
+  const mapSrc = googleEmbedUrl(config.mapEmbedUrl);
+  if (mapSrc) document.getElementById('map-frame').src = mapSrc;
+  external('instagram-preview-link', config.instagramUrl);
+  const postUrls = Array.isArray(config.instagramPosts) ? config.instagramPosts.map(post => instagramEmbedUrl(post.url)).filter(Boolean) : [];
+  const embeds = postUrls.length ? postUrls : [instagramEmbedUrl(config.instagramUrl)].filter(Boolean);
+  if (embeds.length) {
+    const frames = embeds.slice(0, 6).map((src, i) => {
+      const frame = element('iframe', undefined, 'instagram-frame');
+      frame.src = src; frame.title = `Anteprima Instagram Oma ${i + 1}`;
+      frame.loading = 'lazy'; frame.referrerPolicy = 'strict-origin-when-cross-origin';
+      return frame;
+    });
+    document.getElementById('instagram-previews').replaceChildren(...frames);
+  }
+  const reviews = Array.isArray(config.reviews) ? config.reviews : [];
+  const cards = [];
+  for (const review of reviews) {
+    if (typeof review.author !== 'string' || typeof review.text !== 'string') continue;
+    const card = element('figure', undefined, 'review-preview');
+    const max = review.ratingMax === 10 ? 10 : 5;
+    if (Number.isInteger(review.rating) && review.rating >= 1 && review.rating <= max) {
+      const value = max === 5 ? '★'.repeat(review.rating) + '☆'.repeat(5-review.rating) : `${review.rating}/${max}`;
+      const rating = element('p', value, 'review-stars');
+      rating.setAttribute('aria-label', max === 5 ? `${review.rating} stelle su 5` : `Voto ${review.rating} su ${max}`);
+      card.append(rating);
+    }
+    if (review.excerpt) card.append(element('p', 'Estratto della recensione', 'review-excerpt'));
+    const quote = element('blockquote', review.text);
+    const caption = element('figcaption');
+    caption.append(element('strong', review.author));
+    const sourceText = `${review.source || 'Google'}${review.date ? ' · ' + review.date : ''}`;
+    const href = review.sourceUrl && safeUrl(review.sourceUrl);
+    if (href && href.startsWith('https:')) {
+      const source = element('a', sourceText + ' ↗');
+      Object.assign(source, {href, target: '_blank', rel: 'noopener noreferrer'});
+      caption.append(source);
+    } else caption.append(element('span', sourceText));
+    card.append(quote, caption); cards.push(card);
+  }
+  if (cards.length) document.getElementById('review-previews').replaceChildren(...cards);
+}

@@ -53,4 +53,14 @@ I 18 piatti e i prezzi sono dimostrativi. Le immagini esterne Unsplash non raffi
 
 ## Maps, Instagram e recensioni
 
-I collegamenti forniti sono configurati in `data/site.json` e modificabili da Pages CMS. Il box recensioni apre la pagina Google in una nuova scheda; non incorpora, copia o aggiorna automaticamente recensioni o valutazioni. Non richiede API key o widget esterni. Il link Google Maps apre la scheda del ristorante; l’indirizzo stradale resta da completare nel CMS.
+I collegamenti forniti sono configurati in `data/site.json` e modificabili da Pages CMS. La mappa è incorporata nella pagina; Instagram usa un iframe del profilo o dei singoli post. Le anteprime Instagram dipendono dal profilo pubblico, dai permessi di incorporamento e dalle restrizioni del browser. Il box recensioni può mostrare trascrizioni reali inserite dal CMS e apre anche la pagina originale Google. Non importa né aggiorna automaticamente recensioni o valutazioni. Non richiede API key o widget esterni. Il link Google Maps apre la scheda del ristorante; l’indirizzo stradale resta da completare nel CMS.
+
+## Anteprime sulla pagina
+
+- **Mappa**: iframe Google Maps alle coordinate della scheda fornita (41.924737, 12.5250896), senza API key. Il campo CMS `mapEmbedUrl` deve contenere un URL di incorporamento Google Maps, non il normale link alla scheda.
+- **Instagram**: profilo incorporato come anteprima iniziale. Per mostrare post specifici, aggiungerne i permalink pubblici nella lista `instagramPosts` del CMS (post o reel). Le foto non sono scaricate o copiate; le anteprime possono essere bloccate da Instagram, dalle impostazioni del profilo o dal browser. Il collegamento diretto resta disponibile.
+- **Recensioni**: la lista `reviews` del CMS accetta autore pubblico, testo, stelle intere da 1 a 5 e data facoltativa. La lista contiene le tre recensioni fornite dall’utente: Alpha Chau (estratto Google, 5/5), un recensore TheFork (10/10) e Alessandro (Google, voto non indicato). Nessuna testimonianza o valutazione è inventata. Le fonti sono collegate e i voti conservano la scala originale. Le date relative incollate non sono state trasformate in date assolute. Non è un feed live di Google.
+
+Maps e Instagram sono risorse esterne caricate dal browser del visitatore. Il caricamento effettivo di tali servizi non è stato verificato nell’ambiente, che ne blocca l’accesso.
+
+Le recensioni sono trascrizioni fornite dall’utente, non verificate tramite API. Dal CMS è possibile modificarne fonte, link originale, voto facoltativo, scala 5/10 e indicazione di estratto.
