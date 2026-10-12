@@ -1,0 +1,120 @@
+{
+  "note": "Menu dimostrativo · Piatti e prezzi proposti per la demo, da confermare con il ristorante.",
+  "categories": [
+    {
+      "title": "Per cominciare",
+      "dishes": [
+        {
+          "name": "Supplì al telefono",
+          "description": "Riso al pomodoro, cuore di mozzarella e panatura croccante.",
+          "price": 6.0
+        },
+        {
+          "name": "Bruschette dell’osteria",
+          "description": "Pane tostato con pomodoro e basilico, oppure cicoria ripassata.",
+          "price": 7.0
+        },
+        {
+          "name": "Carciofo alla romana",
+          "description": "Carciofo stufato con mentuccia, aglio e olio extravergine. Secondo stagione.",
+          "price": 9.0
+        },
+        {
+          "name": "Tagliere romano",
+          "description": "Salumi, pecorino e pane: un antipasto da condividere.",
+          "price": 16.0
+        }
+      ]
+    },
+    {
+      "title": "I primi della tradizione",
+      "dishes": [
+        {
+          "name": "Tonnarelli cacio e pepe",
+          "description": "Pecorino Romano e pepe nero: l’essenziale, fatto bene.",
+          "price": 14.0
+        },
+        {
+          "name": "Rigatoni alla carbonara",
+          "description": "Guanciale, uovo, Pecorino Romano e pepe nero.",
+          "price": 15.0
+        },
+        {
+          "name": "Bucatini all’amatriciana",
+          "description": "Pomodoro, guanciale e Pecorino Romano.",
+          "price": 15.0
+        },
+        {
+          "name": "Mezze maniche alla gricia",
+          "description": "Guanciale croccante, Pecorino Romano e pepe nero.",
+          "price": 14.0
+        }
+      ]
+    },
+    {
+      "title": "I secondi dell’osteria",
+      "dishes": [
+        {
+          "name": "Saltimbocca alla romana",
+          "description": "Fettine di vitello con prosciutto crudo, salvia e vino bianco.",
+          "price": 19.0
+        },
+        {
+          "name": "Coda alla vaccinara",
+          "description": "Coda di manzo cotta lentamente con pomodoro e sedano.",
+          "price": 20.0
+        },
+        {
+          "name": "Polpette al sugo",
+          "description": "Polpette di carne al pomodoro, con pane per la scarpetta.",
+          "price": 16.0
+        },
+        {
+          "name": "Trippa alla romana",
+          "description": "Trippa al pomodoro con mentuccia e Pecorino Romano.",
+          "price": 17.0
+        }
+      ]
+    },
+    {
+      "title": "Accanto al piatto",
+      "dishes": [
+        {
+          "name": "Cicoria ripassata",
+          "description": "In padella con aglio, olio e peperoncino.",
+          "price": 6.0
+        },
+        {
+          "name": "Patate al forno",
+          "description": "Dorate, con rosmarino e olio extravergine.",
+          "price": 6.0
+        },
+        {
+          "name": "Verdure di stagione",
+          "description": "Una selezione che segue il ritmo delle stagioni.",
+          "price": 7.0
+        }
+      ]
+    },
+    {
+      "title": "Un finale dolce",
+      "dishes": [
+        {
+          "name": "Tiramisù",
+          "description": "Savoiardi, caffè, crema al mascarpone e cacao.",
+          "price": 7.0
+        },
+        {
+          "name": "Crostata ricotta e visciole",
+          "description": "Frolla, ricotta e visciole, secondo la tradizione romana.",
+          "price": 8.0
+        },
+        {
+          "name": "Ciambelline al vino",
+          "description": "Da sgranocchiare a fine pasto.",
+          "price": 5.0
+        }
+      ]
+    }
+  ]
+}
