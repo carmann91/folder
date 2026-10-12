@@ -80,3 +80,7 @@ Le recensioni sono trascrizioni fornite dall’utente, non verificate tramite AP
 ## Versione principale approvata
 
 Il layout chiaro con schizzi graffiti è ora attivo su `index.html` e `chi-siamo.html`, tramite `assets/graffiti.css`, senza fascia di anteprima. Il font Sprite Graffiti resta solo nel titolo principale e le prenotazioni WhatsApp restano disattivate. Le pagine di anteprima conservano le loro varianti per riferimento.
+
+## Pagina menu
+
+Il menu principale è in `menu.html`, raggiungibile dalla navigazione, dalla sezione cucina e da Chi siamo. La homepage non contiene più l’elenco dei piatti. I dati restano in `data/menu.json`, modificabili da Pages CMS. Le prenotazioni restano disattivate.

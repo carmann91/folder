@@ -77,10 +77,10 @@ toggle.addEventListener('click', () => {
 nav.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
 document.addEventListener('keydown', event => { if (event.key === 'Escape') closeMenu(); });
 text('year', String(new Date().getFullYear()));
-loadJson('data/site.json').then(applySite).catch(() => {
+if (status) loadJson('data/site.json').then(applySite).catch(() => {
   applySite({}); status.textContent = 'Impossibile caricare i contatti aggiornati. Riprova più tardi.';
 });
-loadJson('data/menu.json').then(applyMenu).catch(() => {
+if (document.getElementById('menu-grid')) loadJson('data/menu.json').then(applyMenu).catch(() => {
   const notice = document.getElementById('menu-status'); notice.hidden = false;
   notice.textContent = 'Menu aggiornato non disponibile. Le proposte qui sotto sono la versione dimostrativa iniziale: contattaci per conferma.';
 });
