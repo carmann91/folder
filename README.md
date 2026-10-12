@@ -72,3 +72,7 @@ Le recensioni sono trascrizioni fornite dall’utente, non verificate tramite AP
 ## Proposta grafica scura
 
 `preview-scura.html` e `chi-siamo-scura.html` sono anteprime alternative, con un foglio aggiuntivo `assets/dark-preview.css`. Usano gli stessi dati CMS e mantengono le prenotazioni disattivate. La versione principale chiara rimane in `index.html`. La fascia superiore permette il confronto.
+
+## Anteprima chiara con schizzi graffiti
+
+`preview-graffiti.html` e `chi-siamo-graffiti.html` mantengono il layout chiaro con schizzi neri SVG ai margini, disegnati per questa anteprima. Le decorazioni non ricevono click e si ridimensionano su mobile. I file sono in `assets/graffiti` e lo stile aggiuntivo in `assets/graffiti-preview.css`. La homepage originale non cambia.

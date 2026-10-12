@@ -1,0 +1,13 @@
+/* Schizzi ai margini: decorativi e senza interferenze con i contenuti. */
+.preview-ribbon{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:10px 5.5%;background:#ebe4d9;color:#6c625b;border-bottom:1px solid var(--line);font-size:10px;letter-spacing:1px}
+.preview-ribbon a{color:var(--wine);letter-spacing:0;border-bottom:1px solid currentColor}
+.hero{height:calc(100svh - 145px)}
+.intro,.roman-menu,.gallery,.contact,.about-hero,.about-story{position:relative;isolation:isolate}
+.intro::before,.roman-menu::after,.gallery::before,.contact::after,.about-hero::before,.about-story::after{content:"";position:absolute;pointer-events:none;user-select:none;width:clamp(18px,5.5vw,90px);background-repeat:no-repeat;background-size:100% 100%;z-index:-1}
+.intro::before{left:0;top:30px;height:310px;background-image:url('graffiti/splash.svg')}
+.roman-menu::after{right:0;top:150px;height:280px;background-image:url('graffiti/spray.svg')}
+.gallery::before{left:0;bottom:15px;height:250px;background-image:url('graffiti/splash.svg');transform:scaleY(-1)}
+.contact::after{right:0;top:35px;height:330px;background-image:url('graffiti/spray.svg')}
+.about-hero::before{left:0;top:100px;height:320px;background-image:url('graffiti/splash.svg')}
+.about-story::after{right:0;bottom:35px;height:270px;background-image:url('graffiti/spray.svg')}
+@media(max-width:720px){.preview-ribbon{padding:10px 6%;font-size:9px;letter-spacing:.3px}.hero{height:calc(100svh - 124px)}.intro::before,.roman-menu::after,.gallery::before,.contact::after,.about-hero::before,.about-story::after{width:5vw;height:190px}.roman-menu::after{top:160px}.intro::before{top:75px}}
