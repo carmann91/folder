@@ -1,0 +1,37 @@
+/* Proposta alternativa: cacao, legno, vino rosso e luce ambrata. */
+:root{--paper:#211b18;--ink:#f2e6d4;--wine:#d5ad78;--line:#4a3930;--muted:#c2afa0;--panel:#2c231e}
+body{background:var(--paper);color:var(--ink)}
+.preview-ribbon{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:10px 5.5%;background:#171310;color:#c2afa0;border-bottom:1px solid #45342b;font-size:10px;letter-spacing:1.1px}
+.preview-ribbon a{color:#e4c18e;border-bottom:1px solid #806044;letter-spacing:0;padding:2px 0}
+.header{background:#211b18;border-bottom:1px solid #4a3930}
+.brand{color:#e8c899}.header nav{color:#eadbc7}.header a[aria-current="page"]{color:#e8c899}
+.header nav button.nav-contact{color:#d5ad78;border-color:#70523b}
+.hero{color:#f6ead7;background:#241a16;height:calc(100svh - 145px)}
+.hero-photo{filter:brightness(.82) saturate(.75);object-position:center}
+.hero-shade{background:linear-gradient(90deg,rgba(25,15,11,.88),rgba(36,21,14,.27)),linear-gradient(0deg,#211b18b3,transparent 45%)}
+.hero-content .eyebrow{color:#e2bf89}.hero-content>p:not(.eyebrow){color:#eadbc7}
+.button.light{background:#d9b582;color:#261b14}.button.light:hover,.button.light:disabled:hover{background:#d9b582}
+.button.dark{background:#754332;color:#f6ead7}.button.dark:hover,.button.dark:disabled:hover{background:#89543e}
+.button:disabled,.nav-contact:disabled{opacity:.6}
+.intro{background:#211b18}.intro-copy p,.intro-copy .lead{color:var(--muted)}.intro-copy .lead{color:var(--ink)}
+.food-section{background:#30231d}.food-copy>p:not(.eyebrow),.food-detail p{color:#c8b4a3}.food-detail{border-color:#5b4133}.food-detail>span{color:#b69067}
+.food-photo img,.gallery img{filter:saturate(.8) brightness(.9)}
+.statement{background:#482c25;color:#f1e1ca;border-top:1px solid #694536;border-bottom:1px solid #694536}
+.statement .eyebrow,.ornament{color:#d8ae7c}
+.roman-menu{background:#211b18}.menu-heading>p:not(.eyebrow),.menu-category li p,.menu-bottom p{color:var(--muted)}
+.menu-heading .menu-demo{border-color:#aa7d53;color:#bda18b}.menu-category h3,.dish-price{color:#e0ba85}
+.menu-category h3{border-color:#846044}.menu-category li,.menu-bottom{border-color:#4a3930}
+.gallery{background:#211b18}.gallery-heading>p:last-child,.gallery figcaption{color:var(--muted)}
+.social-previews{background:#2b211c}.instagram-card,.reviews-card{background:#241b17;border-color:#624535;box-shadow:0 18px 50px #110c0933}
+.instagram-card h3,.reviews-card h3,.review-preview blockquote,.review-full>p{color:var(--ink)}
+.card-intro,.embed-help,.reviews-empty,.review-excerpt,.review-preview figcaption span{color:var(--muted)}
+.review-preview{border-color:#5a3d2e}.instagram-frame{border-color:#624535;background:#f5f1e8}
+.review-stars,.review-preview figcaption a,.review-full summary{color:#e2b67c}
+.contact{background:#30231d}.contact>div>p:not(.eyebrow),.contact-details p{color:var(--muted)}
+.contact-details>div{border-color:#5b4133}.location-card{background:#241b17;border-color:#624535;box-shadow:0 18px 50px #110c0933}
+.location-heading #address{color:var(--muted)}.map-preview{border-color:#624535;background:#3e2c23}
+footer{background:#191411;border-top:1px solid #4a3930}.demo-note{color:#ae9582}.text-link{color:#dfb885}
+.about-hero{background:#2c211b}.about-intro>p:not(.eyebrow),.about-story-copy{color:var(--muted)}.about-intro .about-lead{color:var(--ink)!important}
+.about-portrait{background:#241b17;border-color:#624535}.about-portrait figcaption{color:var(--muted)}.about-portrait figcaption a{color:#dfb885}
+.about-invite{background:#482c25;color:#f1e1ca}.about-story-copy .about-signature{color:#dfb885}
+@media(max-width:720px){.preview-ribbon{padding:10px 6%;font-size:9px;letter-spacing:.5px}.hero{height:calc(100svh - 124px)}.header nav{background:#211b18;box-shadow:0 12px 24px #0005}.hero-shade{background:linear-gradient(90deg,#190f0bdb,#24150e70)}.nav-toggle span{background:#e1bd89}}

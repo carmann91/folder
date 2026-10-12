@@ -68,3 +68,7 @@ Le recensioni sono trascrizioni fornite dall’utente, non verificate tramite AP
 ## Chi siamo — Leo e Alessio
 
 `chi-siamo.html` è collegata alla navigazione principale. Dal CMS, nella sezione dedicata, si modificano testi e foto. I testi sono una proposta editoriale, senza ruoli, biografie o esperienze non forniti. Il post Instagram è incorporato come alternativa iniziale: l’incorporamento non garantisce la selezione della seconda foto del carosello. Per usare esattamente quella foto, caricare il file autorizzato nel campo `photo` di `data/about.json` tramite CMS. Il link al post conserva `img_index=2`. Il caricamento effettivo di Instagram non è verificabile nell’ambiente.
+
+## Proposta grafica scura
+
+`preview-scura.html` e `chi-siamo-scura.html` sono anteprime alternative, con un foglio aggiuntivo `assets/dark-preview.css`. Usano gli stessi dati CMS e mantengono le prenotazioni disattivate. La versione principale chiara rimane in `index.html`. La fascia superiore permette il confronto.
