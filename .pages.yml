@@ -11,10 +11,6 @@ content:
   path: data/site.json
   format: json
   fields:
-  - name: whatsappNumber
-    label: Numero WhatsApp (es. )
-    type: string
-    required: true
   - name: bookingMessage
     label: Messaggio richiesta prenotazione
     type: text

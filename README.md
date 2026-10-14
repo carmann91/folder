@@ -14,10 +14,10 @@ L’accesso e l’autorizzazione della GitHub App devono essere effettuati dal p
 ### Cosa puoi modificare
 
 - **Menu**: categorie, ordine, piatti, descrizioni, prezzi numerici in euro e nota dimostrativa. Aggiungi o rimuovi elementi nelle liste.
-- **Contatti e homepage**: WhatsApp, messaggio precompilato, indirizzo, orari, link a Google Maps, Instagram e recensioni Google, eventuale menu esterno, titolo e testi introduttivi.
+- **Contatti e homepage**: messaggio precompilato, indirizzo, orari, link a Google Maps, Instagram e recensioni Google, eventuale menu esterno, titolo e testi introduttivi.
 - **Fotografie**: sostituisci le quattro immagini mantenendo l’ordine copertina, cucina, sala e vino. Carica fotografie autorizzate e descrivile nel testo alternativo. La libreria salva i file in `assets/uploads`.
 
-Per WhatsApp inserire il numero internazionale con prefisso: ``. Il click apre un messaggio da completare e inviare: non conferma automaticamente la prenotazione.
+Il numero di cellulare è stato rimosso dai contenuti e dalla configurazione CMS. Le prenotazioni WhatsApp restano disattivate.
 
 ## Pubblicare con dominio personalizzato
 
